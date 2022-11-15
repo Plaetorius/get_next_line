@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 20:51:45 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/15 20:57:52 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*get_next_line(int fd)
 	return (NULL);
 }
 
-static char	*ft_readline(char *str, int *found, int fd)
+char	*ft_readline(char *str, int *found, int fd)
 {
 	char	*bu;
 	int		i;
@@ -69,7 +69,7 @@ static char	*ft_readline(char *str, int *found, int fd)
 	return (NULL);
 }
 
-static char	*ft_has_newline(char *str, int *found)
+char	*ft_has_newline(char *str, int *found)
 {
 	int		i;
 	char	*line;
