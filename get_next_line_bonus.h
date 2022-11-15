@@ -6,14 +6,14 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:26 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 14:32:16 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/15 20:52:50 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE=42
+#  define BUFFER_SIZE 42
 # endif
 # include <unistd.h>
 # include <fcntl.h>

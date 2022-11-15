@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 18:57:00 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/15 20:52:35 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,23 @@ char	*get_next_line(int fd)
 	int			found;
 
 	found = 0;
-	str[BUFFER_SIZE] = '\0';
-	line = ft_has_newline(str, &found);
-	while (found == 0)
+	if (BUFFER_SIZE > 0)
 	{
-		tmp = ft_readline(str, &found, fd);
-		tmp2 = ft_strjoin(line, tmp);
-		free(line);
-		line = ft_strdup(tmp2, 1);
-		free(tmp);
+		str[BUFFER_SIZE] = '\0';
+		line = ft_has_newline(str, &found);
+		while (found == 0)
+		{
+			tmp = ft_readline(str, &found, fd);
+			tmp2 = ft_strjoin(line, tmp);
+			free(line);
+			line = ft_strdup(tmp2, 1);
+			free(tmp);
+		}
+		if (line && !line[0])
+			return (free(line), NULL);
+		return (line);
 	}
-	if (line && !line[0])
-		return (free(line), NULL);
-	return (line);
+	return (NULL);
 }
 
 static char	*ft_readline(char *str, int *found, int fd)

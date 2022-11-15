@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 18:56:14 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/15 20:51:45 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*get_next_line(int fd)
 	int			found;
 
 	found = 0;
-	if (fd >= 0 && fd < FOPEN_MAX - 1)
+	if (fd >= 0 && fd < FOPEN_MAX - 1 && BUFFER_SIZE > 0)
 	{
 		str[fd][BUFFER_SIZE] = '\0';
 		line = ft_has_newline(str[fd], &found);
