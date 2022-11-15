@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 14:50:08 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/15 18:56:14 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,13 @@ char	*get_next_line(int fd)
 			free(tmp);
 		}
 		if (line && !line[0])
-		{
-			free(line);
-			return (NULL);
-		}
+			return (free(line), NULL);
 		return (line);
 	}
 	return (NULL);
-	
-
 }
 
-char	*ft_readline(char *str, int *found, int fd)
+static char	*ft_readline(char *str, int *found, int fd)
 {
 	char	*bu;
 	int		i;
@@ -74,7 +69,7 @@ char	*ft_readline(char *str, int *found, int fd)
 	return (NULL);
 }
 
-char	*ft_has_newline(char *str, int *found)
+static char	*ft_has_newline(char *str, int *found)
 {
 	int		i;
 	char	*line;
@@ -95,26 +90,26 @@ char	*ft_has_newline(char *str, int *found)
 	return (line);
 }
 
-
-// int main(void)
-// {
-// 	int 	fd;
+/*
+int main(void)
+{
+	int 	fd;
 	
-// 	char 	*line;
-// 	int		i;
+	char 	*line;
+	int		i;
 
-// 	i = 0;
-// 	fd = open("get_next_line.h", O_RDONLY);
-// 	line = get_next_line(fd);
-// 	printf("LINE%d:\n%s==============\n", i++, line);
-// 	while (line)
-// 	{
-// 		free(line);
-// 		line = get_next_line(fd);
-// 		printf("LINE%d:\n%s==============\n", i++, line);
-// 	}
-// 	free(line);
-// 	close(fd);
-// 	return(0);
-// }
-
+	i = 0;
+	fd = open("get_next_line.h", O_RDONLY);
+	line = get_next_line(fd);
+	printf("LINE%d:\n%s==============\n", i++, line);
+	while (line)
+	{
+		free(line);
+		line = get_next_line(fd);
+		printf("LINE%d:\n%s==============\n", i++, line);
+	}
+	free(line);
+	close(fd);
+	return(0);
+}
+*/
