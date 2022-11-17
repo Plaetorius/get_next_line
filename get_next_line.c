@@ -6,11 +6,14 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 20:58:06 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/17 09:49:35 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+static char	*ft_readline(char *str, int *found, int fd);
+static char	*ft_has_newline(char *str, int *found);
 
 char	*get_next_line(int fd)
 {
@@ -40,7 +43,7 @@ char	*get_next_line(int fd)
 	return (NULL);
 }
 
-char	*ft_readline(char *str, int *found, int fd)
+static char	*ft_readline(char *str, int *found, int fd)
 {
 	char	*bu;
 	int		i;
@@ -69,7 +72,7 @@ char	*ft_readline(char *str, int *found, int fd)
 	return (NULL);
 }
 
-char	*ft_has_newline(char *str, int *found)
+static char	*ft_has_newline(char *str, int *found)
 {
 	int		i;
 	char	*line;

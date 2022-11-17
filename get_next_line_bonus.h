@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:26 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 20:52:50 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/17 09:49:52 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,13 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-char	*get_next_line(int fd);
-char	*ft_readline(char *str, int *found, int fd);
-char	*ft_has_newline(char *str, int *found);
+char		*get_next_line(int fd);
 
 /* UTILS */
-size_t	ft_strlen(char *s);
-char	*ft_strjoin(char *s1, char *s2);
-int		ft_str_clean_nl(char *str);
-char	*ft_strdup(char *s1, int malloced);
-size_t	ft_strlcpy(char *dst, char *src, size_t dstsize);
+size_t		ft_strlen(char *s);
+char		*ft_strjoin(char *s1, char *s2);
+int			ft_str_clean_nl(char *str);
+char		*ft_strdup(char *s1, int malloced);
+size_t		ft_strlcpy(char *dst, char *src, size_t dstsize);
 
 #endif

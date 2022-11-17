@@ -6,11 +6,14 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 20:57:52 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/17 09:49:58 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
+
+static char	*ft_readline(char *str, int *found, int fd);
+static char	*ft_has_newline(char *str, int *found);
 
 char	*get_next_line(int fd)
 {
