@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:14 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/15 20:57:59 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/17 09:58:25 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	ft_str_clean_nl(char *str)
 	return (-1);
 }
 
-char	*ft_strdup(char *s1, int malloced)
+char	*ft_strdup_bool(char *s1, int malloced)
 {
 	size_t	i;
 	size_t	len;

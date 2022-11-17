@@ -6,7 +6,7 @@
 /*   By: tgernez <tgernez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:22:02 by tgernez           #+#    #+#             */
-/*   Updated: 2022/11/17 09:49:35 by tgernez          ###   ########.fr       */
+/*   Updated: 2022/11/17 09:58:31 by tgernez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*get_next_line(int fd)
 			tmp = ft_readline(str, &found, fd);
 			tmp2 = ft_strjoin(line, tmp);
 			free(line);
-			line = ft_strdup(tmp2, 1);
+			line = ft_strdup_bool(tmp2, 1);
 			free(tmp);
 		}
 		if (line && !line[0])
